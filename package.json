@@ -7,7 +7,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/whalemare/react-native-library.git",
-    "start:first": "npm i && cd example && npm i && npm run android"
   },
   "keywords": [
     "react-native"
@@ -15,7 +14,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "git:reset": "rm -rf .git && git init && git add -A && git commit -m 'Initial commit'"
+    "git:reset": "rm -rf .git && git init && git add -A && git commit -m 'Initial commit'",
+    "initial": "npm run start:first && npm run git:reset",
+    "start:first": "npm i && cd example && npm i && npm run android"
   },
   "peerDependencies": {
     "react-native": "^0.41.2"
