@@ -46,6 +46,7 @@ Roadmap
 - [x] working example folder
 - [x] hot library replacement in development 
 - [x] kotlin support for library android module
+- [x] Gradle 5.4.1
 - [ ] swift support for library ios module
 - [ ] hot reloading for example (working only reloading)
 - [ ] TypeScript for library development
