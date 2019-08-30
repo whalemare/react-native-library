@@ -14,8 +14,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "initial": "npm run git:reset && npm run start:first",
     "git:reset": "rm -rf .git && git init && git add -A && git commit -m 'Initial commit'",
-    "initial": "npm run start:first && npm run git:reset",
     "start:first": "npm i && cd example && npm i && npm run android"
   },
   "peerDependencies": {
