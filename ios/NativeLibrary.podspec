@@ -1,18 +1,18 @@
+require 'json'
+package = JSON.parse(File.read(File.join(__dir__, '../', 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name         = "NativeLibrary"
-  s.version      = "1.0.0"
-  s.summary      = "NativeLibrary"
-  s.description  = <<-DESC
-                  NativeLibrary
-                   DESC
-  s.homepage     = ""
-  s.license      = "MIT"
+  s.name         = 'NativeLibrary'
+  s.version      = package['version']
+  s.summary      = package['description']
+  
+  s.author       = { "author" => package['author'] }
+  s.source       = { :git => package['repository']['url'], :tag => "master" }
+  s.homepage     = package['repository']['url']
+  s.license      = package['license']
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.author             = { "author" => "author@domain.cn" }
-  s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/author/NativeLibrary.git", :tag => "master" }
-  s.source_files  = "NativeLibrary/**/*.{h,m}"
+  s.platform     = :ios, "9.0"
+  s.source_files = "*.{h,m}"
   s.requires_arc = true
 
 
